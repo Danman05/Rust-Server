@@ -6,7 +6,9 @@
 
 .nav {
     padding: 2px;
-    background-color: gray;
+    background-color: #0f0f0f;
+    border-left: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
     position: relative;
 }
 
@@ -15,9 +17,19 @@
     padding: 1.2vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 3vw;
 }
 
 li {
     list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #ebebeb;
+    padding: 1.7vw;
+}
+a:hover {
+    color: #2b2b2b;
+    transition: 0.4s ease-out;
 }
