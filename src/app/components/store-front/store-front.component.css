@@ -61,16 +61,20 @@
     margin: 1vw;
 }
 
-@media (max-width: 700px) {
+
+.mdc-form-field {
+    color: white !important;
+}
+
+@media (max-width: 1100px) {
     .store-item-container {
-grid-template-columns: auto auto;        /* Stack in a single column on smaller screens */
+grid-template-columns: auto auto;      
     grid-column-gap: 2vw;
         grid-row-gap: 2vh;
     }
 }
-@media (max-width: 500px) {
+@media (max-width: 700px) {
     .store-item-container{
         grid-template-columns: auto;
-        /* Stack in a single column on smaller screens */
     }
 }
