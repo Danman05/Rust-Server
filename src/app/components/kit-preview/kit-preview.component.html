@@ -1,0 +1,11 @@
+<h2 mat-dialog-title class="dialog-title">{{ data.title}}</h2>
+
+<mat-dialog-content class="dialog-content">
+    <div class="kit-preview-video">
+        <video height="auto" width="auto" autoplay [muted]=true [src]="data.videoUrl"></video>
+    </div>
+    <div>
+        <h1>Specifications:</h1>
+        <p [innerHTML]="formatDescription(data.description)"></p>
+    </div>
+</mat-dialog-content>

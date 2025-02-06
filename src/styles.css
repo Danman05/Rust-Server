@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --base-clr: #11121a;
+    --line-clr: #42434a;
+    --hover-clr: #222533;
+    --text-clr: #ffffff;
+    --accent-clr: #5e63ff;
+    --secondary-text-clr: #d1d4dc;
+    --background-clr: #131722;
+    --border-clr: #2a2e39;
+}
+
+html {
+    background-color: var(--background-clr);
+    color: var(--secondary-text-clr);
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,26 @@
+<h1 class="header">Store</h1>
+<div class="flex">
+
+    <div class="store-item-container">
+        @for (item of items; track $index) {
+        <div class="store-item-card">
+            <div class="store-item-clickable" (click)="previewKit(item)">
+                <h5 class="store-item-title">{{item.title}}</h5>
+                <!-- <p class="store-item-description">
+                        {{ item.description}}
+                    </p> -->
+                <img class="store-item-picture" [src]="item.icon">
+                @if (item.price > 0) {
+                <h6 class="store-item-price">&dollar;{{item.price}}</h6>
+                }
+                @else {
+                <h6 class="store-item-price">Free</h6>
+                }
+            </div>
+            @if (item.price > 0) {
+                <button class="store-item-btn">Buy</button>
+            }
+        </div>
+        }
+    </div>
+</div>
