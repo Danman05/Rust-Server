@@ -10,7 +10,7 @@
         <div class="store-item-card">
             <div class="store-item-clickable" (click)="previewKit(item)">
                 <h5 class="store-item-title">{{item.title}} | {{isChecked ? "Lifetime": "Monthly"}}</h5>
-                <img class="store-item-picture" [src]="item.icon">
+                <img class="store-item-picture" [src]="item.icon ? assets+item.icon: assets+'transparent.png'">
                 @if (item.price > 0) {
                 <h6 class="store-item-price">&dollar;{{(isChecked ? item.price * 5: item.price) | number: '1.2-2'}}</h6>
                 }
@@ -19,7 +19,9 @@
                 }
             </div>
             @if (item.price > 0) {
-                <button class="store-item-btn">Buy</button>
+                <a [href]="item.tebex_url">
+                    <button class="store-item-btn">Buy</button>
+                </a>
             }
         </div>
         }

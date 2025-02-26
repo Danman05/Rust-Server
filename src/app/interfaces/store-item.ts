@@ -1,8 +1,11 @@
 export interface StoreItem {
+    id: string,
     title: string,
     description: string,
     price: number,
     icon: string | null | undefined
     category: string,
-    videoUrl: string | null | undefined
+    video_url: string | null | undefined
+    tebex_url: string 
+    duration: string
 }
