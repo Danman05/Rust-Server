@@ -1,13 +1,29 @@
 <div class="nav">
     <ul class="items">
-        <li><a href="home">Home</a></li>
-        <li><a href="servers">Server</a></li>
-        <li><a href="store">Store</a></li>
+        <li><a routerLink="home">Home</a></li>
+        <li><a routerLink="servers">Server</a></li>
+        <li><a routerLink="store">Store</a></li>
         <li><a href="https://discord.gg/Es94PhFKyf" target="_blank">Discord</a></li>
         <li><a href="#">Steam</a></li>
     </ul>
-    <button (click)="login()">Login</button>
-        <button (click)="data()">Data</button>
-                <button (click)="logout()">Logout</button>
+    @if (user) {
+    <div class="profile-banner" (click)="toggleUserDrawer()" (mouseover)="userDrawer = true"
+        (mouseleave)="userDrawer = false">
+        <img [src]="user._json.avatarmedium">
+        @if (userDrawer) {
+        <div class="drawer-container">
+            <ul class="user-drawer">
+                <li><button class="btn" (click)="logout()">Profile</button></li>
+                <li><button class="btn" (click)="logout()">Logout</button></li>
+            </ul>
+        </div>
 
+        }
+    </div>
+    }
+    @else {
+    <div class="profile-banner">
+        <button class="btn" (click)="login()">Login</button>
+    </div>
+    }
 </div>

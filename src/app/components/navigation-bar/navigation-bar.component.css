@@ -5,31 +5,62 @@
 }
 
 .nav {
-    padding: 2px;
-    background-color: #0f0f0f;
-    border-left: 1px solid #ebebeb;
-    border-right: 1px solid #ebebeb;
-    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
 }
 
 .items {
     margin: 0;
     padding: 1.2vw;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     gap: 3vw;
+}
+
+.profile-banner {
+    grid-column: 3;
+    justify-self: end;
+}
+
+img {
+    height: 45px;
+    border-radius: 10px;
 }
 
 li {
     list-style: none;
 }
+
 a {
+
     text-decoration: none;
     color: #ebebeb;
     padding: 1.7vw;
 }
+
 a:hover {
+    color: #2b2b2b;
+    transition: 0.4s ease-out;
+}
+
+.user-drawer {
+    position: absolute;
+    display: block;
+    margin-left: -8px;
+}
+
+.btn {
+    background-color: #333;
+    color: white;
+    padding: 1vw;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.btn:hover {
     color: #2b2b2b;
     transition: 0.4s ease-out;
 }
